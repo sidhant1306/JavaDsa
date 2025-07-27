@@ -1,10 +1,11 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class recursionBasics {
 
     public static void main(String[] args) {
-        int[] arr = {29, 30, 34, 35, 36, 37, 44, 54, 54, 54, 54, 69, 78, 88};
-        String str = "HelloSonam";
+//        int[] arr = {29, 30, 34, 35, 36, 37, 44, 54, 54, 54, 54, 69, 78, 88};
+//        String str = "HelloSonam";
 //       printingStart(1,6);
 //       printingEnding(6);
 //        System.out.println(sum(5));
@@ -33,8 +34,28 @@ public class recursionBasics {
 //        System.out.println(removeChar(str, new StringBuilder(),0, 'e'));
 //        skipCharacter("","sidhanttaneja");
 //        skipApple("","bcdapplejapplejoik");
+
+//        int[] arr = {5,8,10,3,1};
+//        System.out.println(Arrays.toString(arr));
+//        sortArr(arr,arr.length);
+//        System.out.println(Arrays.toString(arr));
     }
 
+    public static void sortArr(int[] arr, int n){
+        if(n <= 1) return;
+
+        sortArr(arr, n - 1);
+
+        int lastElement = arr[n - 1];
+        int i = n - 2;
+
+        while(i >= 0 && arr[i] > lastElement){
+            arr[i + 1] = arr[i];
+            i--;
+        }
+
+        arr[i + 1] = lastElement;
+    }
     public static void skipApple(String p, String up){
         if(up.isEmpty()){
             System.out.println(p);
