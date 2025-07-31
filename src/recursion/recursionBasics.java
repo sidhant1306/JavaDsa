@@ -39,6 +39,39 @@ public class recursionBasics {
 //        System.out.println(Arrays.toString(arr));
 //        sortArr(arr,arr.length);
 //        System.out.println(Arrays.toString(arr));
+//        System.out.println(gcd(62, 8));
+
+//        int[] arr = {2,4,5,23,1,3,45,1};
+//        int[] arr2 = {1,2,3,4,5,5,56,2390,3200};
+//        System.out.println(rotatedBinarySearch(arr2, 2390, 0, arr2.length - 1));
+
+
+    }
+
+    // Rotated Binary search :
+
+    public static int rotatedBinarySearch(int[] arr, int target, int start, int end){
+        if(start > end) return -1;
+        int mid = start + (end - start ) / 2;
+        if(arr[mid] == target) return mid;
+        if(arr[start] < arr[mid]){
+            if(target > arr[start] && target < arr[mid]) return rotatedBinarySearch(arr, target, start, mid - 1);
+            return rotatedBinarySearch(arr, target, mid + 1, end);
+        }
+        else{
+            if(target > arr[mid] && target < arr[end]) return rotatedBinarySearch(arr, target, mid + 1, end);
+            else{
+                return rotatedBinarySearch(arr, target, start, mid - 1);
+            }
+        }
+    }
+
+
+    public static int gcd(int a, int b) {
+        if (a % b == 0) return b;
+        else {
+            return gcd(b, a % b);
+        }
     }
 
     public static void sortArr(int[] arr, int n){
