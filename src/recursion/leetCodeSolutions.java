@@ -4,7 +4,7 @@ import java.util.List;
 public class leetCodeSolutions {
     public static void main(String[] args) {
 //        List<String> ans = new ArrayList<>();
-//        String up = "";
+//        String up = "23";
 //        if(up.isEmpty()){
 //            System.out.println(ans);
 //        }else{
@@ -18,7 +18,128 @@ public class leetCodeSolutions {
 //        int ans = dice("", target, n, k);
 //        System.out.println(ans);
 
+
+//        int target = 8;
+//        List<List<Integer>> ans = combinationSum(nums, target);
+//        System.out.println(ans);
+
+
+//        int[] nums = {5, 2, 1};
+//        List<Integer> ans = subSetSum(nums);
+//        System.out.println(ans);
+
     }
+    //QUE(STRIVER) SUBSETS-I :
+
+    public static List<Integer> subSetSum(int[] nums){
+        return subSetSumsHelper(nums, new ArrayList<>(), 0, 0, new ArrayList<>());
+    }
+    public static List<Integer> subSetSumsHelper(int[] nums, List<Integer> p, int index, int sum, List<Integer> result){
+        // base case :
+        if(index == nums.length){
+            result.add(sum);
+            return result;
+        }
+
+        int ch = nums[index];
+        subSetSumsHelper(nums, p, index + 1, sum + ch, result);     //adding the element to the sum 0 + first element + second element
+        subSetSumsHelper(nums, p, index + 1, sum, result);
+
+        return result;
+    }
+
+
+
+
+
+
+    // QUE(216)(LEETCODE) COMBINATION SUM 3 :
+
+    public static List<List<Integer>> combinationSum3(int k, int n){
+        return combinationSum3Helper(k, n, 0, 0, new ArrayList<>(), new ArrayList<>());
+    }
+    public static List<List<Integer>> combinationSum3Helper(int k, int n, int start, int sum, List<Integer> p, List<List<Integer>> result){
+        // base case :
+        if(sum == n && p.size() == k){
+            result.add(new ArrayList<>(p));
+            return result;
+        }
+
+        for (int i = start + 1; i <= 9; i++) {
+
+            if((sum + i) > n) break;
+            if(p.size() + 1 > k) continue;
+            p.add(i);
+            combinationSum3Helper(k, n, i, sum + i, p, result);
+
+            p.remove(p.size() - 1);
+        }
+        return result;
+    }
+
+
+
+
+
+
+    //QUE   COMBINATION SUM 2 :
+
+
+    public static List<List<Integer>> combinationSum2Helper(int[] up, List<Integer> p, int index, List<List<Integer>> result, int target, int currentSum){
+        return combinationSum2(p, up, index, result, target, currentSum);
+    }
+    public static List<List<Integer>> combinationSum2(List<Integer> p, int[] up, int index, List<List<Integer>> result,int target, int correctSum){
+
+        if(correctSum== target){
+            result.add(new ArrayList<>(p));
+            return result;
+        }
+
+
+        for(int i = index; i < up.length; i++){
+            if(correctSum + up[i] > target) break;
+            if(i > index && up[i] == up[i - 1]) continue;
+
+            p.add(up[i]);
+            combinationSum2(p, up, i + 1, result,target,correctSum + up[i]);
+
+            p.remove(p.size() - 1);
+
+        }
+        return result;
+    }
+
+
+
+
+
+
+    // QUE 39. COMBINATION SUM :
+
+    public static List<List<Integer>> combinationSum(int[] candidates, int target){
+        return combinationSumHelper(candidates, target, 0, new ArrayList<>(), new ArrayList<>());
+    }
+
+    public static List<List<Integer>> combinationSumHelper(int[] nums, int target, int index, List<Integer> p, List<List<Integer>> result){
+        if(target == 0){
+            result.add(new ArrayList<>(p));
+            return result;
+        }
+
+        if(target < 0 || index >= nums.length) return result;
+        p.add(nums[index]);
+        combinationSumHelper(nums, target - nums[index], index, p, result);
+
+        p.remove(p.size() - 1);
+        combinationSumHelper(nums, target, index + 1, p, result);
+
+        return result;
+
+    }
+
+
+
+
 
     // QUE 17. LETTER COMBINATIONS OF A PHONE NUMBER :
     public static void phone(String p, String up, List<String> result){
@@ -27,10 +148,10 @@ public class leetCodeSolutions {
             return;
         }
 
-        char digit = up.charAt(0);
+        char digit = up.charAt(0);      // The first character of the up string
 
         int start = 0;
-        int nChars = 3;
+        int nChars = 3;     //characters present at each number
 
         if(digit == '7'){
             start = 'p';
@@ -47,11 +168,12 @@ public class leetCodeSolutions {
         }
 
         else{
-            start = 'a' + (digit - '2') * 3;
+            start = 'a' + (digit - '2') * 3;        //digit - 2 converts it to number '3' - '2' = 1
+                                                    // * 3 because there are 3 characters
         }
 
         for (int i = 0 ; i < nChars; i++) {
-            char ch = (char)(start + i);
+            char ch = (char)(start + i);        // the character we are picking from the position of that number
 
             phone(p + ch, up.substring(1), result);
         }
