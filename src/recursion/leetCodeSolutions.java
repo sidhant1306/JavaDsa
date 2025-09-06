@@ -28,7 +28,77 @@ public class leetCodeSolutions {
 //        List<Integer> ans = subSetSum(nums);
 //        System.out.println(ans);
 
+//        List<List<Integer>> ans = combinationSum3(3, 7);
+//        System.out.println(ans);
+
+
+
+//        int n = 3;
+//        List<String> ans = generatePara(n);
+//        System.out.println(ans);
+
+//        int n = 3;
+//        List<String> ans = generateBinaryStrings(n);
+//        System.out.println(ans);
     }
+
+//QUE (STRIVER) GENERATE BINARY STRINGS :
+
+
+
+    public static List<String> generateBinaryStrings(int n){
+        return generateBinaryStringsHelper(n, "", new ArrayList<>());
+    }
+    public static List<String> generateBinaryStringsHelper(int n, String p, List<String> result){
+        // base case :
+
+        if(p.length() == n){
+            result.add(p);
+            return result;
+        }
+        // we can just directly add 0 because there is no condition of adding 0's
+        generateBinaryStringsHelper(n, p + "0", result);        // just adding 0 to the output string
+        // we have to make two checks we have to check if the last element in the added string output is 1 but to check this we can't directy use length - 1 due to array index out of bounds
+        // so we also add 1 in the case when the output string is empty
+        // else just return the result
+        if(p.isEmpty() || p.charAt( p.length() - 1) != '1'){
+            generateBinaryStringsHelper(n, p + "1", result);    // adding 1 to the output string
+        }
+
+
+        return result;
+    }
+
+
+
+
+
+    // QUE (22) (LEETCODE) GENERATE PARENTHESES :
+
+
+
+    public static List<String> generatePara(int n){
+        return generateParaHelper(n, n, n, "", new ArrayList<>());
+    }
+
+    public static List<String> generateParaHelper(int n, int open, int close, String p, List<String> result){
+        if(open == 0 && close == 0){
+            result.add(p);
+            return result;
+        }
+
+        if(open > 0){
+            generateParaHelper(n, open - 1, close, p + "(", result);
+        }
+        if(close > open){
+            generateParaHelper(n, open, close - 1, p + ")", result);
+        }
+        return result;
+    }
+
+
+
+
     //QUE(STRIVER) SUBSETS-I :
 
     public static List<Integer> subSetSum(int[] nums){
