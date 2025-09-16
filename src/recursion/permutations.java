@@ -1,10 +1,12 @@
+package recursion;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class permutations {
     public static void main(String[] args) {
-        int[] nums = {1,2,2};
+//        int[] nums = {1,2,2};
 //        permutation("", "abc");
 //
 //        System.out.println(permutationCount("", "abc"));

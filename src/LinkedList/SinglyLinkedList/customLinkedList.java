@@ -1,7 +1,9 @@
-package LinkedList;
+package LinkedList.SinglyLinkedList;
 // THIS FILE WILL CONTAIN THE STRUCTURE CODE OF A LINKED LIST,
 // LIKE WE WRITE LinkedList<Integer> = new LinkedList, and we add elements in it, but how does it work,
 // we are going to create the linked list from the beginning via this file, we are going to build the linked list on our own
+
+import org.w3c.dom.Node;
 
 public class customLinkedList {
 
@@ -10,8 +12,8 @@ public class customLinkedList {
 
     public class Node {
         // a linked list node has two things val and the next pointer:
-        private int value;
-        private Node next;
+        public int value;
+        public Node next;
 
         // now it will need a function to get the value of the node which will have two cases
 
@@ -32,9 +34,9 @@ public class customLinkedList {
 
     // now apart from the node structure, a linked list has a head a tail and its size
 
-    private Node head;
+    public Node head;
     private Node tail;
-    private int size;
+    public int size;
 
 
 
@@ -95,7 +97,9 @@ public class customLinkedList {
     // insert at a particular position in the linked list:
 
     public void insertAt(int val, int pos){
-
+        if(pos < 0 || pos > size){
+            throw new IndexOutOfBoundsException("wrong index");
+        }
         if(pos == 0){
             insertFirst(val);       // if we want to insert at the first position
             return;
@@ -106,7 +110,7 @@ public class customLinkedList {
         }
         Node temp = head;       // creating a temp variable which we will move to the position just before the pos
         int i = 1;
-        while(i < pos - 1){     // pos - 1 because we need 1 to pos indexing not 0 to pos indexing
+        while(i < pos - 1){     // pos - 1 because we need 1 to pos indexing, not 0 to pos indexing
             temp = temp.next;
             i++;
         }
@@ -197,6 +201,8 @@ public class customLinkedList {
         }
         return i;
     }
+
+
 }
 
 

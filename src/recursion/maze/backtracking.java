@@ -1,6 +1,8 @@
+package recursion.maze;
+
 public class backtracking {
     public static void main(String[] args) {
-        boolean maze[][] = {
+        boolean[][] maze = {
                 {true, true, true},
                 {true, true, true},
                 {true, true, true},

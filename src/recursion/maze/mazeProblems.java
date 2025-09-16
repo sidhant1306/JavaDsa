@@ -1,3 +1,5 @@
+package recursion.maze;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -14,7 +16,7 @@ public class mazeProblems {
 
 //        printPaths2("", 3, 3);
 
-        boolean maze[][] = {
+        boolean[][] maze = {
                 {true, true, true},
                 {true, true, true},
                 {true, true, true},

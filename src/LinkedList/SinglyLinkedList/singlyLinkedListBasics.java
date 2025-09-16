@@ -1,8 +1,6 @@
-package LinkedList;
+package LinkedList.SinglyLinkedList;
 
-import java.util.LinkedList;
-
-public class LinkedListBasics {
+public class singlyLinkedListBasics {
     public static void main(String[] args) {
         // how to create a linked list by using pre-defined method:
 //        LinkedList<Integer> list = new LinkedList<>();

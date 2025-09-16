@@ -1,0 +1,30 @@
+  //LEETCODE WAY TO MERGE TWO LINKED LISTS:
+//    class Solution {
+//        public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
+//            ListNode dummy = new ListNode(-1);
+//            // it is a dummy node created as an initial point for the new merged list
+//            ListNode tail = dummy;
+//            // tail is right now pointing to dummy because the merged list is empty.
+//
+//            while(list1 != null && list2 != null){
+//                if(list1.val <= list2.val){
+//                    tail.next = list1;
+//                    // it is the tail of the new merged list, so we need to add the new smaller node to the new list, hence we assigned tail.next to point to the current node of the list1 because list1 node is smalelr
+//                    list1 = list1.next; // moving to the next node in the linked list after adding it to the merged list
+//                }
+//                else{
+//                    tail.next = list2;
+//                    list2 = list2.next;
+//                }
+//                tail = tail.next;   // moving the current tail to point to the next node, so that the new node which will be added in the next iteration will be added to its correct position
+//            }   //while loop ends here
+//
+//            if(list1 != null) tail.next = list1;    // it means we are adding all the remaining values of list1 to the merged list by pointing the tail.next of the merged list to list1
+//
+//            if(list2 != null) tail.next = list2;
+//
+//            return dummy.next;  // we return dummy.next because it is the first position which holds any meaningful value in the dummy list
+//        }
+//
+//
+//    }
