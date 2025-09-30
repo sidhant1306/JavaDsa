@@ -35,7 +35,7 @@ public class customLinkedList {
     // now apart from the node structure, a linked list has a head a tail and its size
 
     public Node head;
-    private Node tail;
+    public Node tail;
     public int size;
 
 
