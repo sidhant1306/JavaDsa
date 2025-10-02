@@ -1,4 +1,4 @@
-package StacksAndQueues;
+package StacksAndQueues.QUEUE;
 
 public class customQueue {
 

@@ -1,6 +1,6 @@
-package StacksAndQueues;
+package StacksAndQueues.STACK;
 
-public class DynamicStack extends customStack{
+public class DynamicStack extends customStack {
 
     // now as we know when we insert something in a stack the stack never gets full,
     // the in-built java stack uses a way to avoid getting full which is,
