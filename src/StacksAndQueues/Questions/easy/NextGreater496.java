@@ -1,4 +1,4 @@
-package StacksAndQueues.Questions;
+package StacksAndQueues.Questions.easy;
 
 import java.util.ArrayList;
 import java.util.Collections;

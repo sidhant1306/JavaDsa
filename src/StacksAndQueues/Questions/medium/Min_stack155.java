@@ -1,4 +1,4 @@
-package StacksAndQueues.Questions;
+package StacksAndQueues.Questions.medium;
 
 import static sun.util.locale.LocaleUtils.isEmpty;
 

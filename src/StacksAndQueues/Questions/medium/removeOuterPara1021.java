@@ -1,4 +1,4 @@
-package StacksAndQueues.Questions;
+package StacksAndQueues.Questions.medium;
 
 import java.util.*;
 
