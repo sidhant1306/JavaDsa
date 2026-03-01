@@ -79,5 +79,5 @@ public class FlattenBinaryTree114 {
                 curr = curr.right;  // the while loop will run again if we have some elements still remaining in the left side so we will perform the same thing on the next node.
             }
         }
-    }*/
-}
+    }
+}*/

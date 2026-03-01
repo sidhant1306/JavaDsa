@@ -1,0 +1,77 @@
+
+## 🟢 EASY — 30 Questions
+
+
+| # | Question | Platform |
+|---|----------|----------|
+| 1 | Find the Largest Element in an Array | GFG |      DONE
+| 2 | Find the Second Largest Element | GFG |       DONE
+| 3 | Reverse an Array | GFG |                      DONE
+| 4 | Check if Array is Sorted | GFG |          DONE
+| 5 | Remove Duplicates from Sorted Array | LeetCode #26 |      DONE
+| 6 | Move Zeroes to End | LeetCode #283 |      
+| 7 | Left Rotate Array by One | GFG |                      DONE
+| 8 | Left Rotate Array by K places | GFG |     REM
+| 9 | Union of Two Sorted Arrays | GFG |            DONE
+| 10 | Intersection of Two Arrays | LeetCode #349 |     DONE
+| 11 | Missing Number in Array | LeetCode #268 |
+| 12 | Maximum Consecutive Ones | LeetCode #485 |           DONE
+| 13 | Single Number (XOR trick) | LeetCode #136 |
+| 14 | Plus One | LeetCode #66 |
+| 15 | Contains Duplicate | LeetCode #217 |
+| 16 | Two Sum | LeetCode #1 |
+| 17 | Best Time to Buy and Sell Stock | LeetCode #121 |
+| 18 | Majority Element (n/2) | LeetCode #169 |
+| 19 | Pascal's Triangle | LeetCode #118 |
+| 20 | Merge Sorted Array | LeetCode #88 |
+| 21 | Find All Numbers Disappeared in Array | LeetCode #448 |
+| 22 | Third Maximum Number | LeetCode #414 |
+| 23 | Array Partition I | LeetCode #561 |
+| 24 | Max Product of Two Elements | LeetCode #1464 |
+| 25 | Transpose Matrix | LeetCode #867 |
+| 26 | Shuffle the Array | LeetCode #1470 |
+| 27 | Running Sum of 1D Array | LeetCode #1480 |
+| 28 | Count Items Matching a Rule | LeetCode #1773 |
+| 29 | Find the Highest Altitude | LeetCode #1732 |
+| 30 | Sum of All Odd Length Subarrays | LeetCode #1588 |
+
+---
+
+## 🟡 MEDIUM — 15 Questions
+
+patterns — sliding window, prefix sum, hashing.
+
+| # | Question | Platform |
+|---|----------|----------|
+| 1 | Sort Colors (Dutch National Flag) | LeetCode #75 |
+| 2 | Find the Duplicate Number | LeetCode #287 |
+| 3 | Maximum Subarray (Kadane's Algo) | LeetCode #53 |
+| 4 | Maximum Product Subarray | LeetCode #152 |
+| 5 | Subarray Sum Equals K | LeetCode #560 |
+| 6 | 3Sum | LeetCode #15 |
+| 7 | Container With Most Water | LeetCode #11 |
+| 8 | Product of Array Except Self | LeetCode #238 |
+| 9 | Rotate Array | LeetCode #189 |
+| 10 | Find Minimum in Rotated Sorted Array | LeetCode #153 |
+| 11 | Search in Rotated Sorted Array | LeetCode #33 |
+| 12 | Longest Consecutive Sequence | LeetCode #128 |
+| 13 | Spiral Matrix | LeetCode #54 |
+| 14 | Set Matrix Zeroes | LeetCode #73 |
+| 15 | Next Permutation | LeetCode #31 |
+
+---
+
+## 🔴 HARD — 8 Questions (Final stretch)
+
+
+| # | Question | Platform |
+|---|----------|----------|
+| 1 | Trapping Rain Water | LeetCode #42 |
+| 2 | First Missing Positive | LeetCode #41 |
+| 3 | Maximum Sum Rectangle in a 2D Matrix | GFG / LeetCode #363 |
+| 4 | Merge Intervals → then Merge k Sorted Arrays | LeetCode #56 → GFG |
+| 5 | Sliding Window Maximum | LeetCode #239 |
+| 6 | Count of Inversions | GFG (Merge Sort based) |
+| 7 | Largest Rectangle in Histogram | LeetCode #84 |
+| 8 | Median of Two Sorted Arrays | LeetCode #4 |
+
